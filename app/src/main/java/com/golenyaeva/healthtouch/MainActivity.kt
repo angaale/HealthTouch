@@ -5,12 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.golenyaeva.healthtouch.screen.onboardingscreen.OnboardingScreen
+import com.golenyaeva.healthtouch.screen.onboardingscreen.OnboardingUIModel
 import com.golenyaeva.healthtouch.ui.theme.HealthTouchTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,9 +21,13 @@ class MainActivity : ComponentActivity() {
         setContent {
             HealthTouchTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    OnboardingScreen(
+                        state = OnboardingUIModel(
+                            imageRes = R.drawable.ic_onboarding_1,
+                            title = R.string.onboarding_screen_1_title,
+                            description = R.string.onboarding_screen_1_description,
+                            currentPage = 0,
+                        )
                     )
                 }
             }
