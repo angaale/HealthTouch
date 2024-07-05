@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Health Touch</string>
+
+    <!--OnboardingScreen-->
+    <string name="onboarding_screen_1_title">Хотите укрепить здоровье своего сердца?</string>,
+    <string name="onboarding_screen_2_title">Сохраняйте показания и отправляйте лечащему врачу</string>,
+    <string name="onboarding_screen_3_title">Советы от AI-помощника - консультируйтесь дома</string>,
+
+    <string name="onboarding_screen_1_description">Используйте HealthTouch  каждый день для измерения пульса, вариабельности и получения рекомендаций</string>,
+    <string name="onboarding_screen_2_description">Вся информация сохраняется в приложении и доступна в любой момент без покупки подписки</string>,
+    <string name="onboarding_screen_3_description">Ваш личный карманный доктор - умный друг Хелфи. Ответит на любой вопрос, даже ночью</string>,
 </resources>
