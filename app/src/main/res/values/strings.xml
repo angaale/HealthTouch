@@ -15,4 +15,7 @@
     <string name="home_screen_question">Как Вы чувствуете себя сегодня?</string>
     <string name="last_measure_bpm">%s bpm</string>
     <string name="last_measure_hrv">%s hrv</string>
+
+    <string name="main_tab_title_measure">Последний замер</string>,
+    <string name="main_tab_button_measure">Все замеры</string>,
 </resources>

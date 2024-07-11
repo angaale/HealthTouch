@@ -1,4 +1,4 @@
-@file:JvmName("MeasureUiModelKt")
+@file:JvmName("MeasuringUiModelKt")
 
 package com.golenyaeva.healthtouch.screen.homescreen
 
@@ -7,11 +7,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
@@ -27,11 +28,11 @@ import com.golenyaeva.healthtouch.ui.theme.Primary
 @Composable
 fun Measuring(
     modifier: Modifier = Modifier,
-    state: MeasureUiModel,
+    state: MeasuringUiModel,
 ) {
     Box(
         modifier = modifier
-            .wrapContentSize()
+            .height(72.dp)
             .clip(
                 RoundedCornerShape(
                     bottomStart = 24.dp,
@@ -41,6 +42,7 @@ fun Measuring(
                 )
             )
             .background(color = LightGreen),
+        contentAlignment = Alignment.Center,
     ) {
         Row(
             modifier = Modifier.padding(
@@ -64,8 +66,8 @@ fun Measuring(
                     contentDescription = ""
                 )
                 val valueRes = when (state) {
-                    is MeasureUiModel.BPM -> R.string.last_measure_bpm
-                    is MeasureUiModel.HRV -> R.string.last_measure_hrv
+                    is MeasuringUiModel.BPM -> R.string.last_measure_bpm
+                    is MeasuringUiModel.HRV -> R.string.last_measure_hrv
                 }
                 Text(
                     fontSize = 12.sp,
@@ -86,6 +88,6 @@ fun Measuring(
 @Composable
 fun MeasurePreview() {
     Measuring(
-        state = MeasureUiModel.BPM(86)
+        state = MeasuringUiModel.BPM(86)
     )
 }

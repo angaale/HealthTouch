@@ -13,6 +13,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.golenyaeva.healthtouch.domain.UserModel
 import com.golenyaeva.healthtouch.screen.homescreen.HomeScreen
 import com.golenyaeva.healthtouch.screen.homescreen.HomeUiModel
+import com.golenyaeva.healthtouch.screen.homescreen.MainTabViewUiModel
+import com.golenyaeva.healthtouch.screen.homescreen.MeasuringBpmHrvUiModel
+import com.golenyaeva.healthtouch.screen.homescreen.MeasuringUiModel
 import com.golenyaeva.healthtouch.ui.theme.HealthTouchTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,6 +31,26 @@ class MainActivity : ComponentActivity() {
                                 image = "",
                                 firstName = "Евгений",
                                 lastName = "Онегин",
+                            ),
+                            tabs = listOf(
+                                MainTabViewUiModel.Measuring(
+                                    titleRes = R.string.main_tab_title_measure,
+                                    subtitle = "29.11.2024",
+                                    buttonTextRes = R.string.main_tab_button_measure,
+                                    measuring = MeasuringBpmHrvUiModel(
+                                        bpm = MeasuringUiModel.BPM(86),
+                                        hrv = MeasuringUiModel.HRV(164),
+                                    ),
+                                ),
+                                MainTabViewUiModel.Measuring(
+                                    titleRes = R.string.main_tab_title_measure,
+                                    subtitle = "29.11.2024",
+                                    buttonTextRes = R.string.main_tab_button_measure,
+                                    measuring = MeasuringBpmHrvUiModel(
+                                        bpm = MeasuringUiModel.BPM(86),
+                                        hrv = MeasuringUiModel.HRV(164),
+                                    ),
+                                ),
                             )
                         )
                     )
