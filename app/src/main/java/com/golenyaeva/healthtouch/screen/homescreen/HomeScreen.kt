@@ -6,13 +6,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.golenyaeva.healthtouch.data.UserModel
+import com.golenyaeva.healthtouch.domain.UserModel
 import com.golenyaeva.healthtouch.ui.theme.White
 
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
-    state: HomeUIModel,
+    state: HomeUiModel,
 ) {
     Box(
         modifier = modifier
@@ -29,7 +29,7 @@ fun HomeScreen(
 @Composable
 fun HomeScreenPreview1() {
     HomeScreen(
-        state = HomeUIModel(
+        state = HomeUiModel(
             user = UserModel(
                 firstName = "Евгений",
                 lastName = "Онегин",

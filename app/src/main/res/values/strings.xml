@@ -13,4 +13,6 @@
     <!--HomeScreen-->
     <string name="home_screen_greeting">Привет, %s!</string>
     <string name="home_screen_question">Как Вы чувствуете себя сегодня?</string>
+    <string name="last_measure_bpm">%s bpm</string>
+    <string name="last_measure_hrv">%s hrv</string>
 </resources>

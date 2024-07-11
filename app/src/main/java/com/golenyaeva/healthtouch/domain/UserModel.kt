@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.data
+package com.golenyaeva.healthtouch.domain
 
 data class UserModel(
     val image: String,

@@ -10,9 +10,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.golenyaeva.healthtouch.data.UserModel
+import com.golenyaeva.healthtouch.domain.UserModel
 import com.golenyaeva.healthtouch.screen.homescreen.HomeScreen
-import com.golenyaeva.healthtouch.screen.homescreen.HomeUIModel
+import com.golenyaeva.healthtouch.screen.homescreen.HomeUiModel
 import com.golenyaeva.healthtouch.ui.theme.HealthTouchTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
             HealthTouchTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     HomeScreen(
-                        state = HomeUIModel(
+                        state = HomeUiModel(
                             user = UserModel(
                                 image = "",
                                 firstName = "Евгений",

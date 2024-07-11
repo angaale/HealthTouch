@@ -1,3 +1,5 @@
+@file:JvmName("MeasureUiModelKt")
+
 package com.golenyaeva.healthtouch.screen.homescreen
 
 import androidx.compose.foundation.Image
@@ -5,10 +7,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -21,58 +21,61 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.golenyaeva.healthtouch.R
-import com.golenyaeva.healthtouch.domain.UserModel
 import com.golenyaeva.healthtouch.ui.theme.LightGreen
+import com.golenyaeva.healthtouch.ui.theme.Primary
 
 @Composable
-fun HomeTopBar(
+fun Measuring(
     modifier: Modifier = Modifier,
-    state: UserModel,
+    state: MeasureUiModel,
 ) {
     Box(
         modifier = modifier
-            .fillMaxWidth()
+            .wrapContentSize()
             .clip(
                 RoundedCornerShape(
                     bottomStart = 24.dp,
-                    bottomEnd = 24.dp
+                    bottomEnd = 24.dp,
+                    topEnd = 24.dp,
+                    topStart = 24.dp,
                 )
             )
             .background(color = LightGreen),
     ) {
         Row(
             modifier = Modifier.padding(
-                start = 24.dp,
-                end = 24.dp,
-                top = 60.dp,
-                bottom = 24.dp,
+                start = 12.dp,
+                end = 12.dp,
+                top = 10.dp,
+                bottom = 10.dp,
             )
         ) {
             Image(
-                modifier = Modifier
-                    .size(40.dp)
-                    .clip(CircleShape),
-                painter = painterResource(id = R.drawable.ic_user_empty),
+                modifier = Modifier,
+                painter = painterResource(id = R.drawable.ic_cardio),
                 contentDescription = ""
             )
             Column(
                 modifier = Modifier.padding(start = 12.dp)
             ) {
-                Text(
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight(700),
-                    text = stringResource(
-                        id = R.string.home_screen_greeting,
-                        state.firstName
-                    )
+                Image(
+                    modifier = Modifier,
+                    painter = painterResource(id = R.drawable.ic_heart),
+                    contentDescription = ""
                 )
+                val valueRes = when (state) {
+                    is MeasureUiModel.BPM -> R.string.last_measure_bpm
+                    is MeasureUiModel.HRV -> R.string.last_measure_hrv
+                }
                 Text(
                     fontSize = 12.sp,
-                    fontWeight = FontWeight(400),
+                    color = Primary,
+                    fontWeight = FontWeight(500),
                     modifier = modifier.padding(top = 8.dp),
                     text = stringResource(
-                        id = R.string.home_screen_question,
-                    )
+                        id = valueRes,
+                        state.value
+                    ),
                 )
             }
         }
@@ -81,12 +84,8 @@ fun HomeTopBar(
 
 @Preview
 @Composable
-fun HomeTopBarPreview() {
-    HomeTopBar(
-        state = UserModel(
-            firstName = "Евгений",
-            lastName = "Онегин",
-            image = "Image",
-        )
+fun MeasurePreview() {
+    Measuring(
+        state = MeasureUiModel.BPM(86)
     )
 }

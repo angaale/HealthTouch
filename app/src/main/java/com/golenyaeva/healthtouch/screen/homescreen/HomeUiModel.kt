@@ -1,7 +1,7 @@
 package com.golenyaeva.healthtouch.screen.homescreen
 
-import com.golenyaeva.healthtouch.data.UserModel
+import com.golenyaeva.healthtouch.domain.UserModel
 
-data class HomeUIModel(
+data class HomeUiModel(
     val user: UserModel,
 )
