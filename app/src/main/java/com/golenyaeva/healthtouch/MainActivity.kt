@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
                                 lastName = "Онегин",
                             ),
                             tabs = listOf(
-                                MainTabViewUiModel.Measuring(
+                                MainTabViewUiModel.MeasuringTab(
                                     titleRes = R.string.main_tab_title_measure,
                                     subtitle = "29.11.2024",
                                     buttonTextRes = R.string.main_tab_button_measure,
@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
                                         hrv = MeasuringUiModel.HRV(164),
                                     ),
                                 ),
-                                MainTabViewUiModel.Measuring(
+                                MainTabViewUiModel.MeasuringTab(
                                     titleRes = R.string.main_tab_title_measure,
                                     subtitle = "29.11.2024",
                                     buttonTextRes = R.string.main_tab_button_measure,

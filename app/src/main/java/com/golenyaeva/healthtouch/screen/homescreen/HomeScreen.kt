@@ -9,7 +9,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.golenyaeva.healthtouch.R
 import com.golenyaeva.healthtouch.domain.UserModel
 import com.golenyaeva.healthtouch.ui.theme.White
 
@@ -36,12 +35,13 @@ fun HomeScreen(
                         .padding(top = 14.dp),
                     state = tab,
                     content = {
-                        MeasureBpmHrv(
-                            state = MeasuringBpmHrvUiModel(
-                                bpm = MeasuringUiModel.BPM(86),
-                                hrv = MeasuringUiModel.HRV(164),
+                        when (tab) {
+                            is MainTabViewUiModel.MeasuringTab -> MeasureBpmHrv(
+                                state = tab.measuring
                             )
-                        )
+
+                            is MainTabViewUiModel.SelfFeelingTab -> SelfFeeling(state = tab.selfFeeling)
+                        }
                     }
                 )
             }
@@ -60,40 +60,17 @@ fun HomeScreenPreview() {
                 image = "image"
             ),
             tabs = listOf(
-                MainTabViewUiModel.Measuring(
-                    titleRes = R.string.main_tab_title_measure,
+                MainTabViewUiModel.MeasuringTab(
                     subtitle = "29.11.2024",
-                    buttonTextRes = R.string.main_tab_button_measure,
                     measuring = MeasuringBpmHrvUiModel(
                         bpm = MeasuringUiModel.BPM(86),
                         hrv = MeasuringUiModel.HRV(164),
                     ),
                 ),
-                MainTabViewUiModel.Measuring(
-                    titleRes = R.string.main_tab_title_measure,
+                MainTabViewUiModel.SelfFeelingTab(
                     subtitle = "29.11.2024",
-                    buttonTextRes = R.string.main_tab_button_measure,
-                    measuring = MeasuringBpmHrvUiModel(
-                        bpm = MeasuringUiModel.BPM(86),
-                        hrv = MeasuringUiModel.HRV(164),
-                    ),
-                ),
-                MainTabViewUiModel.Measuring(
-                    titleRes = R.string.main_tab_title_measure,
-                    subtitle = "29.11.2024",
-                    buttonTextRes = R.string.main_tab_button_measure,
-                    measuring = MeasuringBpmHrvUiModel(
-                        bpm = MeasuringUiModel.BPM(86),
-                        hrv = MeasuringUiModel.HRV(164),
-                    ),
-                ),
-                MainTabViewUiModel.Measuring(
-                    titleRes = R.string.main_tab_title_measure,
-                    subtitle = "29.11.2024",
-                    buttonTextRes = R.string.main_tab_button_measure,
-                    measuring = MeasuringBpmHrvUiModel(
-                        bpm = MeasuringUiModel.BPM(86),
-                        hrv = MeasuringUiModel.HRV(164),
+                    selfFeeling = SelfFeelingUiModel.Good(
+                        percent = 86,
                     ),
                 ),
             )

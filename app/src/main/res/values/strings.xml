@@ -16,6 +16,16 @@
     <string name="last_measure_bpm">%s bpm</string>
     <string name="last_measure_hrv">%s hrv</string>
 
-    <string name="main_tab_title_measure">Последний замер</string>,
-    <string name="main_tab_button_measure">Все замеры</string>,
+    <string name="main_tab_title_measure">Последний замер</string>
+    <string name="main_tab_button_measure">Все замеры</string>
+    <string name="main_tab_title_self_feeling">Ваше состояние</string>
+    <string name="main_tab_button_self_feeling">Больше</string>
+
+    <string name="self_feeling_title_bad">%s\%% Плохое</string>
+    <string name="self_feeling_title_good">%s\%% Хорошее</string>
+    <string name="self_feeling_title_okay">%s\%% Среднее</string>
+
+    <string name="self_feeling_subtitle_bad">Нервная система на пределе, срочно требуется отдых</string>
+    <string name="self_feeling_subtitle_good">Нервная система в порядке, восстанавливается со средней скоростью </string>
+    <string name="self_feeling_subtitle_okay">Деятельность нервной системы снижена, требуется разгрузиться</string>
 </resources>

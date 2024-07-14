@@ -58,7 +58,7 @@ fun MainTabView(
 @Preview
 @Composable
 fun MainTabViewPreview() = MainTabView(
-    state = MainTabViewUiModel.Measuring(
+    state = MainTabViewUiModel.MeasuringTab(
         titleRes = R.string.main_tab_title_measure,
         subtitle = "29.11.2024",
         buttonTextRes = R.string.main_tab_button_measure,
