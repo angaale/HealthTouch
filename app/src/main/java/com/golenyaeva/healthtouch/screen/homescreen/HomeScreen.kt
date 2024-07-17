@@ -80,7 +80,7 @@ fun HomeScreen(
 
 @Preview
 @Composable
-fun HomeScreenPreview() {
+fun HomeScreenPreview1() {
     HomeScreen(
         state = HomeUiModel(
             user = UserModel(
@@ -102,6 +102,22 @@ fun HomeScreenPreview() {
                         percent = 86,
                     ),
                 ),
+            )
+        )
+    )
+}
+
+@Preview
+@Composable
+fun HomeScreenPreview2() {
+    HomeScreen(
+        state = HomeUiModel(
+            user = UserModel(
+                firstName = "Евгений",
+                lastName = "Онегин",
+                image = "image"
+            ),
+            tabs = listOf(
                 MainTabViewUiModel.CardsActivitiesTab(
                     subtitle = "29.11.2024",
                     activitiesModel = listOf(
