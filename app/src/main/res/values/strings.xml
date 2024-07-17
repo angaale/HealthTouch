@@ -21,6 +21,8 @@
     <string name="main_tab_title_self_feeling">Ваше состояние</string>
     <string name="main_tab_button_self_feeling">Больше</string>
     <string name="main_tab_title_recent_activities">Недавние активности</string>
+    <string name="main_tab_title_recommendation_activities">Рекомендуемые активности</string>
+    <string name="main_tab_subtitle_recommendation_activities">На основе вашего самочувствия</string>
     <string name="main_tab_button_recent_activities">Все активности</string>
 
     <string name="self_feeling_title_bad">%s\%% Плохое</string>

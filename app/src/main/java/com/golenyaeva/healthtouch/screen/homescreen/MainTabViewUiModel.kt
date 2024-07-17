@@ -29,4 +29,11 @@ sealed class MainTabViewUiModel(
         @StringRes override val buttonTextRes: Int? = R.string.main_tab_button_recent_activities,
         val activitiesModel: List<CardActivitiesModel>,
     ) : MainTabViewUiModel(titleRes, subtitle, buttonTextRes)
+
+    data class CardsRecommendationsTab(
+        @StringRes override val titleRes: Int = R.string.main_tab_title_recommendation_activities,
+        override val subtitle: String,
+        @StringRes override val buttonTextRes: Int? = R.string.main_tab_button_self_feeling,
+        val activitiesModel: List<CardActivitiesModel>,
+    ) : MainTabViewUiModel(titleRes, subtitle, buttonTextRes)
 }
