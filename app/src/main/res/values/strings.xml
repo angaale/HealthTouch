@@ -16,6 +16,8 @@
     <string name="last_measure_bpm">%s bpm</string>
     <string name="last_measure_hrv">%s hrv</string>
 
+    <string name="home_screen_empty_title">Здесь пока ничего нет.\nСделайте свой первый замер, нажав на кнопку</string>
+
     <string name="main_tab_title_measure">Последний замер</string>
     <string name="main_tab_button_measure">Все замеры</string>
     <string name="main_tab_title_self_feeling">Ваше состояние</string>
