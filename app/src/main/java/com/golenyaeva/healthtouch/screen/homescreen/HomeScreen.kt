@@ -37,6 +37,9 @@ fun HomeScreen(
         HomeTopBar(
             state = state.user
         )
+        NavigationBarView(
+            modifier = Modifier.align(Alignment.BottomCenter)
+        )
         if (state.tabs.isEmpty()) {
             Box(
                 modifier = Modifier.fillMaxSize(),
