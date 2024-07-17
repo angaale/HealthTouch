@@ -48,7 +48,7 @@ fun MainTabView(
             fontSize = 12.sp,
             fontWeight = FontWeight(400),
         )
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(16.dp))
         content()
         Spacer(modifier = Modifier.height(18.dp))
         HorizontalDivider(thickness = 1.dp)

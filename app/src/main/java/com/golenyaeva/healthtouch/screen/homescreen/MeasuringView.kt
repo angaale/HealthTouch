@@ -54,7 +54,7 @@ fun Measuring(
         ) {
             Image(
                 modifier = Modifier,
-                painter = painterResource(id = R.drawable.ic_cardio),
+                painter = painterResource(id = R.drawable.ic_ekg),
                 contentDescription = ""
             )
             Column(

@@ -2,6 +2,7 @@ package com.golenyaeva.healthtouch.screen.homescreen
 
 import androidx.annotation.StringRes
 import com.golenyaeva.healthtouch.R
+import com.golenyaeva.healthtouch.domain.CardActivitiesModel
 
 sealed class MainTabViewUiModel(
     @StringRes open val titleRes: Int,
@@ -20,5 +21,12 @@ sealed class MainTabViewUiModel(
         override val subtitle: String,
         @StringRes override val buttonTextRes: Int? = R.string.main_tab_button_self_feeling,
         val selfFeeling: SelfFeelingUiModel,
+    ) : MainTabViewUiModel(titleRes, subtitle, buttonTextRes)
+
+    data class CardsActivitiesTab(
+        @StringRes override val titleRes: Int = R.string.main_tab_title_recent_activities,
+        override val subtitle: String,
+        @StringRes override val buttonTextRes: Int? = R.string.main_tab_button_recent_activities,
+        val activitiesModel: List<CardActivitiesModel>,
     ) : MainTabViewUiModel(titleRes, subtitle, buttonTextRes)
 }

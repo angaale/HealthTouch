@@ -20,6 +20,8 @@
     <string name="main_tab_button_measure">Все замеры</string>
     <string name="main_tab_title_self_feeling">Ваше состояние</string>
     <string name="main_tab_button_self_feeling">Больше</string>
+    <string name="main_tab_title_recent_activities">Недавние активности</string>
+    <string name="main_tab_button_recent_activities">Все активности</string>
 
     <string name="self_feeling_title_bad">%s\%% Плохое</string>
     <string name="self_feeling_title_good">%s\%% Хорошее</string>
@@ -28,4 +30,14 @@
     <string name="self_feeling_subtitle_bad">Нервная система на пределе, срочно требуется отдых</string>
     <string name="self_feeling_subtitle_good">Нервная система в порядке, восстанавливается со средней скоростью </string>
     <string name="self_feeling_subtitle_okay">Деятельность нервной системы снижена, требуется разгрузиться</string>
+
+    <string name="activities_yoga">Йога</string>
+    <string name="activities_walk">Прогулка</string>
+    <string name="activities_run">Бег</string>
+    <string name="activities_doctor">Поход к врачу</string>
+    <string name="activities_relax">Релакс</string>
+    <string name="activities_stress">Стресс</string>
+    <string name="activities_meeting">Встреча</string>
+    <string name="activities_excitement">Волнение</string>
+    <string name="activities_cardio">Кардио</string>
 </resources>
