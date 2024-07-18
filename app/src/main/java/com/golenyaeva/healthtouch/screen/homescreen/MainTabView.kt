@@ -1,10 +1,13 @@
 package com.golenyaeva.healthtouch.screen.homescreen
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,7 +23,6 @@ import com.golenyaeva.healthtouch.R
 fun MainTabView(
     modifier: Modifier = Modifier,
     state: MainTabViewUiModel,
-    content: @Composable() (() -> Unit) = { }
 ) {
     Column(
         modifier = modifier
@@ -49,7 +51,36 @@ fun MainTabView(
             fontWeight = FontWeight(400),
         )
         Spacer(modifier = Modifier.height(16.dp))
-        content()
+        when (state) {
+            is MainTabViewUiModel.MeasuringTab -> MeasureBpmHrv(
+                state = state.measuring
+            )
+
+            is MainTabViewUiModel.SelfFeelingTab -> SelfFeeling(state = state.selfFeeling)
+            is MainTabViewUiModel.CardsActivitiesTab -> {
+                LazyRow(
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                ) {
+                    items(state.activitiesModel) { card ->
+                        CardsActivities(
+                            state = card
+                        )
+                    }
+                }
+            }
+
+            is MainTabViewUiModel.CardsRecommendationsTab -> {
+                LazyRow(
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                ) {
+                    items(state.activitiesModel) { card ->
+                        CardsActivities(
+                            state = card
+                        )
+                    }
+                }
+            }
+        }
         Spacer(modifier = Modifier.height(18.dp))
         HorizontalDivider(thickness = 1.dp)
     }
@@ -67,12 +98,4 @@ fun MainTabViewPreview() = MainTabView(
             hrv = MeasuringUiModel.HRV(164),
         ),
     ),
-    content = {
-        MeasureBpmHrv(
-            state = MeasuringBpmHrvUiModel(
-                bpm = MeasuringUiModel.BPM(86),
-                hrv = MeasuringUiModel.HRV(164),
-            )
-        )
-    }
 )
