@@ -1,13 +1,10 @@
 package com.golenyaeva.healthtouch.screen.homescreen
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -64,38 +61,6 @@ fun HomeScreen(
                         .padding(horizontal = 24.dp)
                         .padding(top = 14.dp),
                     state = tab,
-                    content = {
-                        when (tab) {
-                            is MainTabViewUiModel.MeasuringTab -> MeasureBpmHrv(
-                                state = tab.measuring
-                            )
-
-                            is MainTabViewUiModel.SelfFeelingTab -> SelfFeeling(state = tab.selfFeeling)
-                            is MainTabViewUiModel.CardsActivitiesTab -> {
-                                LazyRow(
-                                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                                ) {
-                                    items(tab.activitiesModel) { card ->
-                                        CardsActivities(
-                                            state = card
-                                        )
-                                    }
-                                }
-                            }
-
-                            is MainTabViewUiModel.CardsRecommendationsTab -> {
-                                LazyRow(
-                                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                                ) {
-                                    items(tab.activitiesModel) { card ->
-                                        CardsActivities(
-                                            state = card
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                    }
                 )
             }
         }
