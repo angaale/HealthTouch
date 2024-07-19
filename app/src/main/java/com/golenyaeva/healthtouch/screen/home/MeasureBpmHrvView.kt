@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.screen.homescreen
+package com.golenyaeva.healthtouch.screen.home
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer

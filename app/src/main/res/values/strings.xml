@@ -44,4 +44,20 @@
     <string name="activities_meeting">Встреча</string>
     <string name="activities_excitement">Волнение</string>
     <string name="activities_cardio">Кардио</string>
+
+    <!-- ProfileScreen -->
+    <string name="profile_screen_last_name_label">Фамилия</string>
+    <string name="profile_screen_last_name_supporting">Введите Вашу фамилию</string>
+
+    <string name="profile_screen_name_label">Имя</string>
+    <string name="profile_screen_name_supporting">Введите Ваше имя</string>
+
+    <string name="profile_screen_height_label">Рост</string>
+    <string name="profile_screen_height_supporting">Введите Ваш рост (см)</string>
+
+    <string name="profile_screen_weight_label">Вес</string>
+    <string name="profile_screen_weight_supporting">Введите Ваш вес (кг)</string>
+
+    <!-- Buttons -->
+    <string name="save">Сохранить</string>
 </resources>

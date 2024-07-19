@@ -1,18 +1,17 @@
-@file:JvmName("MeasuringUiModelKt")
-
-package com.golenyaeva.healthtouch.screen.homescreen
+package com.golenyaeva.healthtouch.screen.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
@@ -22,62 +21,58 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.golenyaeva.healthtouch.R
+import com.golenyaeva.healthtouch.domain.UserModel
 import com.golenyaeva.healthtouch.ui.theme.LightGreen
-import com.golenyaeva.healthtouch.ui.theme.Primary
 
 @Composable
-fun Measuring(
+fun HomeTopBar(
     modifier: Modifier = Modifier,
-    state: MeasuringUiModel,
+    state: UserModel,
 ) {
     Box(
         modifier = modifier
-            .height(72.dp)
+            .fillMaxWidth()
             .clip(
                 RoundedCornerShape(
                     bottomStart = 24.dp,
-                    bottomEnd = 24.dp,
-                    topEnd = 24.dp,
-                    topStart = 24.dp,
+                    bottomEnd = 24.dp
                 )
             )
             .background(color = LightGreen),
-        contentAlignment = Alignment.Center,
     ) {
         Row(
             modifier = Modifier.padding(
-                start = 12.dp,
-                end = 12.dp,
-                top = 10.dp,
-                bottom = 10.dp,
+                start = 24.dp,
+                end = 24.dp,
+                top = 60.dp,
+                bottom = 24.dp,
             )
         ) {
             Image(
-                modifier = Modifier,
-                painter = painterResource(id = R.drawable.ic_ekg),
+                modifier = Modifier
+                    .size(40.dp)
+                    .clip(CircleShape),
+                painter = painterResource(id = R.drawable.ic_user_empty),
                 contentDescription = ""
             )
             Column(
                 modifier = Modifier.padding(start = 12.dp)
             ) {
-                Image(
-                    modifier = Modifier,
-                    painter = painterResource(id = R.drawable.ic_heart),
-                    contentDescription = ""
+                Text(
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight(700),
+                    text = stringResource(
+                        id = R.string.home_screen_greeting,
+                        state.firstName
+                    )
                 )
-                val valueRes = when (state) {
-                    is MeasuringUiModel.BPM -> R.string.last_measure_bpm
-                    is MeasuringUiModel.HRV -> R.string.last_measure_hrv
-                }
                 Text(
                     fontSize = 12.sp,
-                    color = Primary,
-                    fontWeight = FontWeight(500),
+                    fontWeight = FontWeight(400),
                     modifier = modifier.padding(top = 8.dp),
                     text = stringResource(
-                        id = valueRes,
-                        state.value
-                    ),
+                        id = R.string.home_screen_question,
+                    )
                 )
             }
         }
@@ -86,8 +81,14 @@ fun Measuring(
 
 @Preview
 @Composable
-fun MeasurePreview() {
-    Measuring(
-        state = MeasuringUiModel.BPM(86)
+fun HomeTopBarPreview() {
+    HomeTopBar(
+        state = UserModel(
+            firstName = "Евгений",
+            lastName = "Онегин",
+            image = "Image",
+            height = 100,
+            weight = 100,
+        )
     )
 }
