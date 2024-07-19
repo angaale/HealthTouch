@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.screen.homescreen
+package com.golenyaeva.healthtouch.screen.home
 
 sealed class MeasuringUiModel(
     open val value: Int,

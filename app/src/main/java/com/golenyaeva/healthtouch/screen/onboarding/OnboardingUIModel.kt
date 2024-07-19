@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.screen.onboardingscreen
+package com.golenyaeva.healthtouch.screen.onboarding
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

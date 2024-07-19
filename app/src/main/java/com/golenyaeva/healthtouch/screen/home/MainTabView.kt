@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.screen.homescreen
+package com.golenyaeva.healthtouch.screen.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
