@@ -10,6 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.golenyaeva.healthtouch.screen.home.MeasureScreen
+import com.golenyaeva.healthtouch.screen.home.MeasureScreenUiModel
 import com.golenyaeva.healthtouch.ui.theme.HealthTouchTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,6 +21,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             HealthTouchTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    MeasureScreen(
+                        state = MeasureScreenUiModel(
+                            pulse = 129,
+                            progress = 0.02f
+                        )
+                    )
                 }
             }
         }
