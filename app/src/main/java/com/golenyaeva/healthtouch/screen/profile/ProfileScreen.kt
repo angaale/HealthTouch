@@ -18,8 +18,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.golenyaeva.healthtouch.R
 import com.golenyaeva.healthtouch.domain.UserModel
-import com.golenyaeva.healthtouch.screen.home.ButtonView
-import com.golenyaeva.healthtouch.screen.home.ButtonViewUiModel
+import com.golenyaeva.healthtouch.ui.kit.button.ButtonView
+import com.golenyaeva.healthtouch.ui.kit.button.ButtonViewUiModel
 import com.golenyaeva.healthtouch.screen.home.UserImageView
 import com.golenyaeva.healthtouch.ui.kit.OutlinedTextFieldView
 import com.golenyaeva.healthtouch.ui.theme.White

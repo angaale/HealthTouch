@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.screen.home
+package com.golenyaeva.healthtouch.ui.kit.button
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height

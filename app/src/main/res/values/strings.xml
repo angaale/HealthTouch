@@ -66,4 +66,9 @@
     <string name="measure_screen_percents">%s\%%</string>
     <string name="measure_screen_advice">Не отвлекайтесь, дышите равномерно, не разговаривайте, не убирайте палец от камеры</string>
 
+    <!-- ResultScreen -->
+    <string name="result_screen_title">Результат</string>
+    <string name="result_screen_measuring_title">Значения пульса и вариабельности</string>
+    <string name="result_screen_button_title">На главную</string>
+
 </resources>
