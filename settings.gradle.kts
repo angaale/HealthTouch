@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Health Touch"
 include(":app")
+include(":core-ui")
