@@ -3,9 +3,9 @@ package com.golenyaeva.healthtouch.screen.home
 import androidx.annotation.StringRes
 import androidx.compose.ui.graphics.Color
 import com.golenyaeva.healthtouch.R
-import com.golenyaeva.healthtouch.ui.theme.LightGreen
-import com.golenyaeva.healthtouch.ui.theme.LightPink
-import com.golenyaeva.healthtouch.ui.theme.LightYellow
+import com.golenyaeva.coreui.theme.LightGreen
+import com.golenyaeva.coreui.theme.LightPink
+import com.golenyaeva.coreui.theme.LightYellow
 
 sealed class SelfFeelingUiModel(
     @StringRes open val title: Int,

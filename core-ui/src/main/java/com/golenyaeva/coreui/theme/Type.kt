@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.ui.theme
+package com.golenyaeva.coreui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

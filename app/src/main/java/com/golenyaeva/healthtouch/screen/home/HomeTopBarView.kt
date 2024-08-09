@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.golenyaeva.healthtouch.R
 import com.golenyaeva.healthtouch.domain.UserModel
-import com.golenyaeva.healthtouch.ui.theme.LightGreen
+import com.golenyaeva.coreui.theme.LightGreen
 
 @Composable
 fun HomeTopBar(

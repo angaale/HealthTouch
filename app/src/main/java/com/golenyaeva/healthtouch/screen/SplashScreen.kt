@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.golenyaeva.healthtouch.R
-import com.golenyaeva.healthtouch.ui.theme.LightGreen
+import com.golenyaeva.coreui.theme.LightGreen
 
 @Composable
 fun SplashScreen(

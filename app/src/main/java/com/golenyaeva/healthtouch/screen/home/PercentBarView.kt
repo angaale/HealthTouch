@@ -11,8 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.golenyaeva.healthtouch.ui.theme.BlackTransparent20
-import com.golenyaeva.healthtouch.ui.theme.White
+import com.golenyaeva.coreui.theme.BlackTransparent20
+import com.golenyaeva.coreui.theme.White
 
 @Composable
 fun PercentBarView(

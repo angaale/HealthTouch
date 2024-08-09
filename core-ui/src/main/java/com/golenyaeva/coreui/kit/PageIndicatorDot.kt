@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.ui.kit
+package com.golenyaeva.coreui.kit
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateDpAsState

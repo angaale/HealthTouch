@@ -21,10 +21,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.golenyaeva.healthtouch.R
-import com.golenyaeva.healthtouch.ui.kit.PageIndicator
-import com.golenyaeva.healthtouch.ui.theme.Primary
-import com.golenyaeva.healthtouch.ui.theme.TextPrimary
-import com.golenyaeva.healthtouch.ui.theme.White
+import com.golenyaeva.coreui.kit.PageIndicator
+import com.golenyaeva.coreui.theme.Primary
+import com.golenyaeva.coreui.theme.TextPrimary
+import com.golenyaeva.coreui.theme.White
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

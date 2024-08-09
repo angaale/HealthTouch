@@ -15,7 +15,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.golenyaeva.healthtouch.R
-import com.golenyaeva.healthtouch.ui.theme.White
+import com.golenyaeva.coreui.theme.White
 
 @Composable
 fun TabMoreScreen(

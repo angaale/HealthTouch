@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.ui.kit.button
+package com.golenyaeva.coreui.kit.button
 
 import androidx.annotation.StringRes
 

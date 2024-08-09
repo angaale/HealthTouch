@@ -18,8 +18,8 @@ import androidx.compose.ui.unit.sp
 import com.golenyaeva.healthtouch.R
 import com.golenyaeva.healthtouch.domain.CardActivitiesModel
 import com.golenyaeva.healthtouch.domain.UserModel
-import com.golenyaeva.healthtouch.ui.theme.TextDisable
-import com.golenyaeva.healthtouch.ui.theme.White
+import com.golenyaeva.coreui.theme.TextDisable
+import com.golenyaeva.coreui.theme.White
 
 @Composable
 fun HomeScreen(

@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.ui.theme
+package com.golenyaeva.coreui.theme
 
 import android.app.Activity
 import android.os.Build

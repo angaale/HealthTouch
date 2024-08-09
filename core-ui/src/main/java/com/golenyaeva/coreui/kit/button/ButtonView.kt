@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.ui.kit.button
+package com.golenyaeva.coreui.kit.button
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -11,10 +11,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.golenyaeva.healthtouch.R
-import com.golenyaeva.healthtouch.ui.theme.Primary
-import com.golenyaeva.healthtouch.ui.theme.TextDisable
-import com.golenyaeva.healthtouch.ui.theme.White
+import com.golenyaeva.core_ui.R
+import com.golenyaeva.coreui.theme.Primary
+import com.golenyaeva.coreui.theme.TextDisable
+import com.golenyaeva.coreui.theme.White
 
 @Composable
 fun ButtonView(

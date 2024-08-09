@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.golenyaeva.healthtouch.screen.home.MeasureScreen
 import com.golenyaeva.healthtouch.screen.home.MeasureScreenUiModel
-import com.golenyaeva.healthtouch.ui.theme.HealthTouchTheme
+import com.golenyaeva.coreui.theme.HealthTouchTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

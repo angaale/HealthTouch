@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.ui.kit
+package com.golenyaeva.coreui.kit
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,10 +9,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.golenyaeva.healthtouch.R
-import com.golenyaeva.healthtouch.ui.theme.Primary
-import com.golenyaeva.healthtouch.ui.theme.TextFieldDefault
-import com.golenyaeva.healthtouch.ui.theme.TextPrimary
+import com.golenyaeva.core_ui.R
+import com.golenyaeva.coreui.theme.Primary
+import com.golenyaeva.coreui.theme.TextFieldDefault
+import com.golenyaeva.coreui.theme.TextPrimary
 
 @Composable
 fun OutlinedTextFieldView(
@@ -46,6 +46,6 @@ fun OutlinedTextFieldView(
 @Composable
 fun OutlinedTextFieldViewPreview() = OutlinedTextFieldView(
     value = "Text",
-    labelRes = R.string.profile_screen_name_label,
-    supportingTextRes = R.string.profile_screen_name_supporting,
+    labelRes = R.string.label,
+    supportingTextRes = R.string.supporting_text,
 )

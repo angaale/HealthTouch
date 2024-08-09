@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.ui.kit
+package com.golenyaeva.coreui.kit
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -9,8 +9,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.golenyaeva.healthtouch.ui.theme.LightGreen
-import com.golenyaeva.healthtouch.ui.theme.Primary
+import com.golenyaeva.coreui.theme.LightGreen
+import com.golenyaeva.coreui.theme.Primary
 
 @Composable
 fun PageIndicator(

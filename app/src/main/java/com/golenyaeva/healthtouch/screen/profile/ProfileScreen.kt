@@ -16,13 +16,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.golenyaeva.coreui.kit.OutlinedTextFieldView
+import com.golenyaeva.coreui.kit.button.ButtonView
+import com.golenyaeva.coreui.kit.button.ButtonViewUiModel
+import com.golenyaeva.coreui.theme.White
 import com.golenyaeva.healthtouch.R
 import com.golenyaeva.healthtouch.domain.UserModel
-import com.golenyaeva.healthtouch.ui.kit.button.ButtonView
-import com.golenyaeva.healthtouch.ui.kit.button.ButtonViewUiModel
 import com.golenyaeva.healthtouch.screen.home.UserImageView
-import com.golenyaeva.healthtouch.ui.kit.OutlinedTextFieldView
-import com.golenyaeva.healthtouch.ui.theme.White
 
 @Composable
 fun ProfileScreen(
@@ -48,7 +48,7 @@ fun ProfileScreen(
                 .padding(horizontal = 24.dp)
                 .padding(bottom = 42.dp),
             state = ButtonViewUiModel(
-                textButtonRes = R.string.save,
+                textButtonRes = com.golenyaeva.core_ui.R.string.save,
                 isLoading = false,
                 style = ButtonViewUiModel.Style.PRIMARY
             )

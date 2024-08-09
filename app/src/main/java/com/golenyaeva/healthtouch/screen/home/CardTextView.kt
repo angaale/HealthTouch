@@ -16,8 +16,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.golenyaeva.healthtouch.R
-import com.golenyaeva.healthtouch.ui.theme.BlackTransparent20
-import com.golenyaeva.healthtouch.ui.theme.White
+import com.golenyaeva.coreui.theme.BlackTransparent20
+import com.golenyaeva.coreui.theme.White
 
 @Composable
 fun CardTextView(

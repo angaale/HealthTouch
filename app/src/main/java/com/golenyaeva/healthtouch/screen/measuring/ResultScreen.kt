@@ -17,9 +17,9 @@ import com.golenyaeva.healthtouch.screen.home.MainTabViewUiModel
 import com.golenyaeva.healthtouch.screen.home.MeasuringBpmHrvUiModel
 import com.golenyaeva.healthtouch.screen.home.MeasuringUiModel
 import com.golenyaeva.healthtouch.screen.home.SelfFeelingUiModel
-import com.golenyaeva.healthtouch.ui.kit.button.ButtonView
-import com.golenyaeva.healthtouch.ui.kit.button.ButtonViewUiModel
-import com.golenyaeva.healthtouch.ui.theme.White
+import com.golenyaeva.coreui.kit.button.ButtonView
+import com.golenyaeva.coreui.kit.button.ButtonViewUiModel
+import com.golenyaeva.coreui.theme.White
 
 @Composable
 fun ResultScreen(

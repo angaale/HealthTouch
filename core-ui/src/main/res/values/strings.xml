@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Actions -->
+    <string name="save">Сохранить</string>
+
+    <!-- Holders -->
+    <string name="label">Label</string>
+    <string name="supporting_text">Supporting text</string>
+
+</resources>

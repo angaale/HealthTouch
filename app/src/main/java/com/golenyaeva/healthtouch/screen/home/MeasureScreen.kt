@@ -24,7 +24,7 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.golenyaeva.healthtouch.R
-import com.golenyaeva.healthtouch.ui.theme.White
+import com.golenyaeva.coreui.theme.White
 
 @Composable
 fun MeasureScreen(

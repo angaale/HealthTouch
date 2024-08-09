@@ -58,9 +58,6 @@
     <string name="profile_screen_weight_label">Вес</string>
     <string name="profile_screen_weight_supporting">Введите Ваш вес (кг)</string>
 
-    <!-- Buttons -->
-    <string name="save">Сохранить</string>
-
     <!-- MeasureScreen -->
     <string name="measure_screen_bpm">%s уд/мин</string>
     <string name="measure_screen_percents">%s\%%</string>
