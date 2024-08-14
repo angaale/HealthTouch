@@ -25,6 +25,8 @@ import com.golenyaeva.coreui.theme.TextDisable
 import com.golenyaeva.coreui.theme.White
 import com.golenyaeva.healthtouch.R
 import com.golenyaeva.healthtouch.domain.UserModel
+import com.golenyaeva.healthtouch.presentation.screen.home.model.HomeUiModel
+import com.golenyaeva.healthtouch.presentation.screen.home.view.HomeTopBar
 import drawable.NavigationBarView
 import com.golenyaeva.core_ui.R as CoreR
 

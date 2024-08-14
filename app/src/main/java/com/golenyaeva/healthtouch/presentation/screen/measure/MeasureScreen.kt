@@ -43,8 +43,6 @@ import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.golenyaeva.coreui.theme.White
 import com.golenyaeva.healthtouch.R
-import com.golenyaeva.healthtouch.presentation.screen.home.CardText
-import com.golenyaeva.healthtouch.presentation.screen.home.PercentBarView
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.PermissionState
 import com.google.accompanist.permissions.isGranted
