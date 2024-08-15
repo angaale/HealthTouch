@@ -16,8 +16,13 @@ palette = "1.0.0"
 hilt = "2.50"
 hiltNavigation = "1.0.0-rc01"
 composeNavigation = "2.7.7"
+roomVersion = "2.6.1"
 
 [libraries]
+room = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomVersion" }
+
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
