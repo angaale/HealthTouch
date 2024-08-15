@@ -15,6 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.golenyaeva.coreui.kit.cardactivity.CardActivitiesModel
 import com.golenyaeva.coreui.kit.maintab.MainTabView
 import com.golenyaeva.coreui.kit.maintab.MainTabViewUiModel
@@ -34,6 +35,7 @@ import drawable.NavigationBarView
 fun HomeScreen(
     modifier: Modifier = Modifier,
     state: HomeUiModel,
+    navController: NavController? = null,
     dispatch: (Intent) -> Unit = {},
 ) {
     Box(

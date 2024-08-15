@@ -37,6 +37,7 @@ class MainActivity : ComponentActivity() {
                             val state: HomeUiModel = viewModel.uiState.collectAsState().value
                             HomeScreen(
                                 state = state,
+                                navController = navController,
                                 dispatch = viewModel::handleIntent
                             )
                         }

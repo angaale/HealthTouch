@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.base
+package com.golenyaeva.base
 
 import androidx.lifecycle.ViewModel
 
