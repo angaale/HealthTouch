@@ -32,6 +32,7 @@ fun SplashScreen(
     }
     LaunchedEffect(key1 = Unit, block = {
         delay(1000)
+        navController?.popBackStack()
         navController?.navigate("main")
     })
 }

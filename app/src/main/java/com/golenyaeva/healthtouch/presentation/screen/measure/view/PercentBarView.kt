@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.presentation.screen.measure
+package com.golenyaeva.healthtouch.presentation.screen.measure.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -17,7 +17,7 @@ import com.golenyaeva.coreui.theme.White
 @Composable
 fun PercentBarView(
     modifier: Modifier = Modifier,
-    percent: Float,
+    percent: Double,
 ) {
     Row(modifier = modifier) {
         Box(
@@ -28,7 +28,7 @@ fun PercentBarView(
                         bottomEnd = 24.dp
                     )
                 )
-                .fillMaxWidth(percent)
+                .fillMaxWidth(percent.toFloat())
                 .background(color = White)
                 .height(6.dp),
         )
@@ -43,4 +43,4 @@ fun PercentBarView(
 
 @Preview
 @Composable
-fun PercentBarViewPreview() = PercentBarView(percent = 0.5f)
+fun PercentBarViewPreview() = PercentBarView(percent = 0.5)

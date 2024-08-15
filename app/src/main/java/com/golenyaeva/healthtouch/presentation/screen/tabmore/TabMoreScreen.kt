@@ -20,7 +20,7 @@ import com.golenyaeva.coreui.kit.measuring.MeasuringUiModel
 import com.golenyaeva.coreui.kit.measuringbpmhrv.MeasuringBpmHrvUiModel
 import com.golenyaeva.coreui.theme.White
 import com.golenyaeva.healthtouch.R
-import drawable.NavigationBarView
+import com.golenyaeva.healthtouch.presentation.screen.main.view.NavigationBarView
 
 @Composable
 fun TabMoreScreen(

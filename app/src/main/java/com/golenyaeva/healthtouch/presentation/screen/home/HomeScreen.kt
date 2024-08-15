@@ -26,15 +26,14 @@ import com.golenyaeva.coreui.theme.TextDisable
 import com.golenyaeva.coreui.theme.White
 import com.golenyaeva.healthtouch.R
 import com.golenyaeva.healthtouch.domain.UserModel
-import com.golenyaeva.healthtouch.presentation.screen.home.model.HomeUiModel
+import com.golenyaeva.healthtouch.presentation.screen.home.model.HomeScreenUiModel
 import com.golenyaeva.healthtouch.presentation.screen.home.model.Intent
 import com.golenyaeva.healthtouch.presentation.screen.home.view.HomeTopBar
-import drawable.NavigationBarView
 
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
-    state: HomeUiModel,
+    state: HomeScreenUiModel,
     navController: NavController? = null,
     dispatch: (Intent) -> Unit = {},
 ) {
@@ -45,9 +44,6 @@ fun HomeScreen(
     ) {
         HomeTopBar(
             state = state.user
-        )
-        NavigationBarView(
-            modifier = Modifier.align(Alignment.BottomCenter)
         )
         if (state.tabs.isEmpty())
             Box(
@@ -80,7 +76,7 @@ fun HomeScreen(
 @Preview
 @Composable
 fun HomeScreenNoItemsPreview() = HomeScreen(
-    state = HomeUiModel(
+    state = HomeScreenUiModel(
         user = UserModel(
             firstName = "Евгений",
             lastName = "Онегин",
@@ -94,7 +90,7 @@ fun HomeScreenNoItemsPreview() = HomeScreen(
 @Preview
 @Composable
 fun HomeScreenPreview1() = HomeScreen(
-    state = HomeUiModel(
+    state = HomeScreenUiModel(
         user = UserModel(
             firstName = "Евгений",
             lastName = "Онегин",
@@ -123,7 +119,7 @@ fun HomeScreenPreview1() = HomeScreen(
 @Preview
 @Composable
 fun HomeScreenPreview2() = HomeScreen(
-    state = HomeUiModel(
+    state = HomeScreenUiModel(
         user = UserModel(
             firstName = "Евгений",
             lastName = "Онегин",

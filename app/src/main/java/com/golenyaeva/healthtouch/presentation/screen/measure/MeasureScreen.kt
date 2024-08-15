@@ -43,6 +43,9 @@ import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.golenyaeva.coreui.theme.White
 import com.golenyaeva.healthtouch.R
+import com.golenyaeva.healthtouch.presentation.screen.measure.model.MeasureScreenUiModel
+import com.golenyaeva.healthtouch.presentation.screen.measure.view.CardText
+import com.golenyaeva.healthtouch.presentation.screen.measure.view.PercentBarView
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.PermissionState
 import com.google.accompanist.permissions.isGranted
@@ -215,6 +218,6 @@ fun calculatePulse(colorData: List<Int>, time: Long): Double {
 fun MeasureScreenPreview() = MeasureScreen(
     state = MeasureScreenUiModel(
         pulse = 129,
-        progress = 0.02f
+        progress = 0.02
     )
 )
