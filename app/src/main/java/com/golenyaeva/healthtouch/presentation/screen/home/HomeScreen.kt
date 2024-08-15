@@ -15,6 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.golenyaeva.coreui.kit.cardactivity.CardActivitiesModel
 import com.golenyaeva.coreui.kit.maintab.MainTabView
 import com.golenyaeva.coreui.kit.maintab.MainTabViewUiModel
@@ -25,13 +26,16 @@ import com.golenyaeva.coreui.theme.TextDisable
 import com.golenyaeva.coreui.theme.White
 import com.golenyaeva.healthtouch.R
 import com.golenyaeva.healthtouch.domain.UserModel
-import drawable.NavigationBarView
-import com.golenyaeva.core_ui.R as CoreR
+import com.golenyaeva.healthtouch.presentation.screen.home.model.HomeScreenUiModel
+import com.golenyaeva.healthtouch.presentation.screen.home.model.Intent
+import com.golenyaeva.healthtouch.presentation.screen.home.view.HomeTopBar
 
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
-    state: HomeUiModel,
+    state: HomeScreenUiModel,
+    navController: NavController? = null,
+    dispatch: (Intent) -> Unit = {},
 ) {
     Box(
         modifier = modifier
@@ -41,12 +45,9 @@ fun HomeScreen(
         HomeTopBar(
             state = state.user
         )
-        NavigationBarView(
-            modifier = Modifier.align(Alignment.BottomCenter)
-        )
-        if (state.tabs.isEmpty()) {
+        if (state.tabs.isEmpty())
             Box(
-                modifier = Modifier.fillMaxSize(),
+                modifier = modifier.fillMaxSize(),
                 contentAlignment = Alignment.Center,
             ) {
                 Text(
@@ -57,8 +58,6 @@ fun HomeScreen(
                     fontWeight = FontWeight(400),
                 )
             }
-            return
-        }
         Column(
             modifier = Modifier.padding(top = 150.dp),
         ) {
@@ -76,79 +75,73 @@ fun HomeScreen(
 
 @Preview
 @Composable
-fun HomeScreenEmptyPreview() {
-    HomeScreen(
-        state = HomeUiModel(
-            user = UserModel(
-                firstName = "Евгений",
-                lastName = "Онегин",
-                image = "image",
-                height = 100,
-                weight = 100,
-            ),
-        )
+fun HomeScreenNoItemsPreview() = HomeScreen(
+    state = HomeScreenUiModel(
+        user = UserModel(
+            firstName = "Евгений",
+            lastName = "Онегин",
+            image = "image",
+            height = 100,
+            weight = 100,
+        ),
     )
-}
+)
 
 @Preview
 @Composable
-fun HomeScreenPreview1() {
-    HomeScreen(
-        state = HomeUiModel(
-            user = UserModel(
-                firstName = "Евгений",
-                lastName = "Онегин",
-                image = "image",
-                height = 100,
-                weight = 100,
+fun HomeScreenPreview1() = HomeScreen(
+    state = HomeScreenUiModel(
+        user = UserModel(
+            firstName = "Евгений",
+            lastName = "Онегин",
+            image = "image",
+            height = 100,
+            weight = 100,
+        ),
+        tabs = listOf(
+            MainTabViewUiModel.MeasuringTab(
+                subtitle = "29.11.2024",
+                measuring = MeasuringBpmHrvUiModel(
+                    bpm = MeasuringUiModel.BPM(86),
+                    hrv = MeasuringUiModel.HRV(164),
+                ),
             ),
-            tabs = listOf(
-                MainTabViewUiModel.MeasuringTab(
-                    subtitle = "29.11.2024",
-                    measuring = MeasuringBpmHrvUiModel(
-                        bpm = MeasuringUiModel.BPM(86),
-                        hrv = MeasuringUiModel.HRV(164),
-                    ),
+            MainTabViewUiModel.SelfFeelingTab(
+                subtitle = "29.11.2024",
+                selfFeeling = SelfFeelingUiModel.Good(
+                    percent = 86,
                 ),
-                MainTabViewUiModel.SelfFeelingTab(
-                    subtitle = "29.11.2024",
-                    selfFeeling = SelfFeelingUiModel.Good(
-                        percent = 86,
-                    ),
-                ),
-            )
+            ),
         )
     )
-}
+)
 
 @Preview
 @Composable
-fun HomeScreenPreview2() {
-    HomeScreen(
-        state = HomeUiModel(
-            user = UserModel(
-                firstName = "Евгений",
-                lastName = "Онегин",
-                image = "image",
-                height = 100,
-                weight = 100,
+fun HomeScreenPreview2() = HomeScreen(
+    state = HomeScreenUiModel(
+        user = UserModel(
+            firstName = "Евгений",
+            lastName = "Онегин",
+            image = "image",
+            height = 100,
+            weight = 100,
+        ),
+        tabs = listOf(
+            MainTabViewUiModel.CardsActivitiesTab(
+                subtitle = "29.11.2024",
+                activitiesModel = listOf(
+                    CardActivitiesModel.Excitement(),
+                    CardActivitiesModel.Run()
+                )
             ),
-            tabs = listOf(
-                MainTabViewUiModel.CardsActivitiesTab(
-                    subtitle = "29.11.2024",
-                    activitiesModel = listOf(
-                        CardActivitiesModel.Excitement(),
-                        CardActivitiesModel.Run()
-                    )
-                ),
-                MainTabViewUiModel.CardsRecommendationsTab(
-                    subtitle = stringResource(id = CoreR.string.main_tab_subtitle_recommendation_activities),
-                    activitiesModel = listOf(
-                        CardActivitiesModel.Walk(),
-                        CardActivitiesModel.Yoga()
-                    )
-                ),
-            )
+            MainTabViewUiModel.CardsRecommendationsTab(
+                subtitle = stringResource(id = com.golenyaeva.core_ui.R.string.main_tab_subtitle_recommendation_activities),
+                activitiesModel = listOf(
+                    CardActivitiesModel.Walk(),
+                    CardActivitiesModel.Yoga()
+                )
+            ),
         )
     )
-}
+)

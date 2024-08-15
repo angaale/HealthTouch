@@ -1,4 +1,4 @@
-package com.golenyaeva.healthtouch.presentation.screen.home
+package com.golenyaeva.healthtouch.presentation.screen.home.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
