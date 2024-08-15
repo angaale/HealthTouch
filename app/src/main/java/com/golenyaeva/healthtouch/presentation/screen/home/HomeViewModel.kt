@@ -7,6 +7,7 @@ import com.golenyaeva.healthtouch.domain.repository.UserLocalSource
 import com.golenyaeva.healthtouch.presentation.screen.home.model.HomeScreenUiModel
 import com.golenyaeva.healthtouch.presentation.screen.home.model.Intent
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -22,8 +23,10 @@ class HomeViewModel @Inject constructor(
     val uiState: StateFlow<HomeScreenUiModel> = _uiState.asStateFlow()
 
     init {
-        viewModelScope.launch {
-            _uiState.value = HomeScreenUiModel(user = userLocalSource.getUser())
+        viewModelScope.launch(Dispatchers.IO) {
+            userLocalSource.getUser()?.let { user ->
+                _uiState.value = HomeScreenUiModel(user = user)
+            }
         }
     }
 

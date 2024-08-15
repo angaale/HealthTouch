@@ -1,6 +1,6 @@
 package com.golenyaeva.healthtouch.di
 
-import com.golenyaeva.healthtouch.data.local.UserLocalSourceImpl
+import com.golenyaeva.healthtouch.data.local.localsource.UserLocalSourceImpl
 import com.golenyaeva.healthtouch.domain.repository.UserLocalSource
 import dagger.Binds
 import dagger.Module
